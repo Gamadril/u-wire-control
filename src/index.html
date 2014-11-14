@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>µ-wire control</title>
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
+    <link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+    <div class="work">
+        <div class="container">
+            <div id="color" class="contentarea">
+                <div id="colorpicker">
+                    <img id="colorwheelbg" src="res/colorwheel.png" width="auto" height="90%"/>
+                    <div id="pointer"></div>
+                    <div class="touchrect"></div>
+                </div>
+                <div class="slider">
+                    <input type="range" value="1.00" min="0.00" max="1.00" step="0.02">
+                </div>
+                <div id="buttonctrl">
+                    <input type="text" class="value" autocomplete="off" autocorrect="off" autocapitalize="off"/>
+                </div>
+            </div>
+            <div id="effects" class="contentarea">
+                <ul></ul>
+            </div>
+            <div id="settings" class="contentarea">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="button selected" id="colorButton" data-area="color">
+            <div class="icon">&#xe800;</div>
+            <div class="title">Color</div>
+            <div class="touchrect"></div>
+        </div>
+        <div class="button" id="effectsButton" data-area="effects">
+            <div class="icon">&#xe602;</div>
+            <div class="title">Effects</div>
+            <div class="touchrect"></div>
+        </div>
+        <div class="button" id="settingsButton" data-area="settings">
+            <div class="icon">&#x6e;</div>
+            <div class="title">Settings</div>
+            <div class="touchrect"></div>
+        </div>
+    </div>
+</div>
+<script src="js/vendor/require.js" data-main="js/app/main"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+    "name": "µ-wire control",
+	"short_name": "u-wire app",
+    "description": "Chrome app that uses Chrome's usb API to control a µ-wire device",
+	"author": {
+		"name": "Daniel Wiese",
+		"email": "gamadril.dev@gmail.com"
+	},
+    "manifest_version": 2,
+    "version": "0.1",
+    "minimum_chrome_version": "38",
+    "permissions": [
+      "usb", "storage",
+      {
+        "usbDevices": [
+          {
+            "vendorId": 6017,
+            "productId": 3231
+          }
+        ]
+      }
+    ],
+    "app": {
+        "background": {
+            "scripts": ["js/background.js"]
+        }
+    },
+	"icons": {
+	    "128": "res/icon_128.png"
+	}
+}
